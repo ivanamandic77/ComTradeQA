@@ -1,6 +1,6 @@
-BASE_URL="https://comtradeqa.herokuapp.com"
+BASE_URL="https://comtradeqa.herokuapp.com/"
 
-LOGIN_PAGE="/login"
+LOGIN_PAGE="login"
 
-REGISTER_PAGE="/register"
+REGISTER_PAGE="register"
 
