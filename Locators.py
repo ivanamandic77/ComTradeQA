@@ -18,3 +18,5 @@ noviMeme_css="body:nth-child(2) div:nth-child(2) div:nth-child(1) div.gledaMeme:
 
 
 registrujSe_dugme_css="div:nth-child(2) div:nth-child(1) div.registerPage:nth-child(2) form.registerForm > button.form-input-btn:nth-child(3)"
+
+ok_css="#ok"
