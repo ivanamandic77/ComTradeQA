@@ -9,7 +9,7 @@ def IzlogujSe(imejl,sifra):
     driver.get(Constants.BASE_URL)
     driver.maximize_window()
     time.sleep(5)
-    prijaviSe=driver.find_element_by_css_selector("header:nth-child(1) div.meniji ul.lista li:nth-child(2) > a:nth-child(1)")
+    prijaviSe=driver.find_element_by_css_selector(Locators.prijaviSe_css)
     prijaviSe.click()
     time.sleep(5)
     
