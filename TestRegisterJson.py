@@ -3,8 +3,9 @@ import Constants
 import Locators
 import requests
 import time
+import MockedData
 
-def RegistrujteSe(usr,email,psw,psw1):
+def RegistrujteSe(usr,email,psw):
     driver=webdriver.Chrome()
     driver.get(Constants.BASE_URL)
     driver.maximize_window()
@@ -25,7 +26,7 @@ def RegistrujteSe(usr,email,psw,psw1):
     korisnickoIme.send_keys(usr)
     imejl.send_keys(email)
     sifra.send_keys(psw)
-    ponoviSifru.send_keys(psw1)
+    ponoviSifru.send_keys(psw)
     registrujSe.click()
     time.sleep(3)
     
@@ -35,15 +36,8 @@ def RegistrujteSe(usr,email,psw,psw1):
     else:
         print("Neuspesna registracija")
 
+test_data=MockedData.getTestData("Mocked_Register.json")
+for podatak in test_data:
+    RegistrujteSe(podatak["username"],podatak["email"],podatak["password"])
 
-
-korisnickoIme=input("Unesite korisnicko ime: ")
-imejl=input("Unesite email adresu:")
-sifra=input("Unesite sifru (Sifra mora da ima najmanje 8 karaktera, 1 veliko sovo i 1 broj):")
-ponoviSifru=input("Ponovite sifru:")
-
-RegistrujteSe(korisnickoIme,imejl,sifra,ponoviSifru)
-
-
-
-
+#promeni podatke u json fajlu jer su ovi postojeci vec registrovani
